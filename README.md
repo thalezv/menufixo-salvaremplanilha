@@ -1,0 +1,1 @@
+Este projeto, consta com três blocos, um menu fixo que acompanha todo o site e com efeitos de área selecionada, um formulário com tamanho de tela, que envia os dados por meio de API para uma planilha do Google e uma área de texto com rolagem própria, e muda os atributos quando a pagina desce até determinada área.

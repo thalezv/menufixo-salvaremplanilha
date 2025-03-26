@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sora", sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: grey;
+}
+
+.nav{
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+}
+
+.nav ul{
+    width: 350px;
+    display: flex;
+    gap: 10px;
+}
+
+.nav ul li{
+    width: 70px;
+    height: 70px;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+}
+
+.nav ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+}
+
+.nav ul li a .icone{
+    display: block;
+    font-size: 25px;
+    color: grey;
+    position: relative;
+    transition: .2s;
+}
+
+.nav ul li a .texto{
+    color: grey;
+    position: absolute;
+    opacity: 0;
+    transition: .2s;
+    transform: translateY(-20px);
+}
+
+.nav ul li.ativo a .icone{
+    transform: translateY(35px);
+    color: orange;
+}
+
+.nav ul li.ativo a .texto{
+    color: orange;
+    opacity: 1;
+    transition: .2s;
+    transform: translateY(-10px);
+}
+
+.seletor{
+    width: 70px;
+    height: 70px;
+    background-color: green;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transition: .5s;
+}
+
+.nav ul li:nth-child(1).ativo ~ .seletor{
+    transform: translateX(calc(80px * 0));
+}
+
+.nav ul li:nth-child(2).ativo ~ .seletor{
+    transform: translateX(calc(80px * 1));
+}
+
+.nav ul li:nth-child(3).ativo ~ .seletor{
+    transform: translateX(calc(80px * 2));
+}
+
+.nav ul li:nth-child(4).ativo ~ .seletor{
+    transform: translateX(calc(80px * 3));
+}
+
+/*formulario*/
+
+.form{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form{
+    width: 500px;
+    padding: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+h1{
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: orange;
+    text-align: center;
+}
+
+input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#enviar{
+    border: none;
+    background-color: orange;
+    color: black;
+    width: 200px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#enviar:hover{
+    background-color: orangered;
+}
+
+/*mudanças no css, pela posição*/
+
+.transparencia{
+    height: 200%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5%;
+}
+
+.andando{
+    background-color: transparent;
+    height: 400px;
+    width: 400px;
+    border: 1px solid black;
+    padding: 20px;
+    border-radius: 20px;
+    position: sticky;
+    top: 25%;
+}
+
+.andando.desceu{
+    background-color: black;
+}
+
+.andando.desceu .rolagem::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.521);
+}
+
+.andando.desceu p{
+    color: white;
+}
+
+.rolagem{
+    overflow: auto;
+    height: calc(100% - 40px);
+}
+
+.rolagem::-webkit-scrollbar{
+    display: none;
+    width: 10px;
+}
+
+.rolagem:hover::-webkit-scrollbar{
+    display: block;
+}
+
+.rolagem::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.rolagem::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+}
+
+.andando h1{
+    font-size: 30px;
+}
+
+.andando p{
+    padding-top: 5%;
+    font-size: 25px;
+    text-align: justify;
+    text-indent: 20px;
+}
+
+.cor{
+    height: 50% ;
+}
